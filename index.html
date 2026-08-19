@@ -59,43 +59,6 @@
 </head>
 <body>
 
-  <audio id="myAudio"></audio>
-
-  <button class="toggle-btn" id="playPauseBtn" aria-label="Play">
-    <svg class="icon icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-    <svg class="icon icon-pause" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
-  </button>
-
-  <script>
-    const btn = document.getElementById('playPauseBtn');
-    const audio = document.getElementById('myAudio');
-
-    // Automatically pulls music URL from ?src= parameter in the link
-    const urlParams = new URLSearchParams(window.location.search);
-    const musicUrl = urlParams.get('src');
-
-    if (musicUrl) {
-      audio.src = musicUrl;
-    }
-
-    btn.addEventListener('click', () => {
-      if (!audio.src) {
-        alert("No audio file found in the URL parameter!");
-        return;
-      }
-      
-      if (audio.paused) {
-        audio.play();
-        btn.classList.add('is-playing');
-      } else {
-        audio.pause();
-        btn.classList.remove('is-playing');
-      }
-    });
-
-    audio.addEventListener('ended', () => {
-      btn.classList.remove('is-playing');
-    });
-  </script>
+   <p>HELLO</p>
 </body>
 </html>
